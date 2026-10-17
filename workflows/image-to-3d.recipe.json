@@ -1,0 +1,381 @@
+{
+  "recipe": "dart3s-image-to-3d",
+  "params": {
+    "image": {
+      "type": "string",
+      "default": "viking_wolf_rune_axe.png"
+    },
+    "polygons": {
+      "type": "int",
+      "default": 10000
+    },
+    "remesh_resolution": {
+      "type": "int",
+      "default": 256
+    },
+    "texture_size": {
+      "type": "int",
+      "default": 256
+    },
+    "structure_seed": {
+      "type": "int",
+      "default": 56
+    },
+    "shape_seed": {
+      "type": "int",
+      "default": 42
+    },
+    "texture_seed": {
+      "type": "int",
+      "default": 43
+    },
+    "use_trellis2": {
+      "type": "bool",
+      "default": false
+    }
+  },
+  "source": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/3d_pixal3d_trellis2_image_to_model.json",
+  "ops": [
+    {
+      "op": "connect",
+      "from": "147.metallic",
+      "to": "210.metallic"
+    },
+    {
+      "op": "set_node_field",
+      "node": "207",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "connect",
+      "from": "147.roughness",
+      "to": "210.roughness"
+    },
+    {
+      "op": "set_node_field",
+      "node": "208",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "connect",
+      "from": "147.base_color",
+      "to": "210.base_color"
+    },
+    {
+      "op": "set_node_field",
+      "node": "164",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "connect",
+      "from": "92.mesh",
+      "to": "241.mesh"
+    },
+    {
+      "op": "set_node_field",
+      "node": "202",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "261",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "262",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "252",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "connect",
+      "from": "248.output",
+      "to": "312.masks"
+    },
+    {
+      "op": "set_node_field",
+      "node": "303",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "connect",
+      "from": "312.images",
+      "to": "56.image"
+    },
+    {
+      "op": "connect",
+      "from": "312.images",
+      "to": "298.image"
+    },
+    {
+      "op": "connect",
+      "from": "312.images",
+      "to": "299.image"
+    },
+    {
+      "op": "set_node_field",
+      "node": "302",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "246",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "4",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "247",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "250",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "connect",
+      "from": "224.normal_map",
+      "to": "210.normal_map"
+    },
+    {
+      "op": "set_node_field",
+      "node": "226",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "connect",
+      "from": "233.occlusion",
+      "to": "210.occlusion"
+    },
+    {
+      "op": "set_node_field",
+      "node": "235",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "282",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "313",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "317",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "set_node_field",
+      "node": "323",
+      "field": "mode",
+      "value": 2
+    },
+    {
+      "op": "add_node",
+      "class_type": "PrimitiveInt",
+      "as": "shape_seed",
+      "at": [
+        -2400,
+        -500
+      ]
+    },
+    {
+      "op": "set_widget",
+      "node": "shape_seed",
+      "widget": "value",
+      "value": "${shape_seed}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "shape_seed",
+      "field": "title",
+      "value": "Shared geometry seed (both shape samplers)"
+    },
+    {
+      "op": "set_widget",
+      "node": "18",
+      "widget": "seed",
+      "value": "${shape_seed}"
+    },
+    {
+      "op": "connect",
+      "from": "shape_seed.INT",
+      "to": "18.seed"
+    },
+    {
+      "op": "set_widget",
+      "node": "23",
+      "widget": "seed",
+      "value": "${shape_seed}"
+    },
+    {
+      "op": "connect",
+      "from": "shape_seed.INT",
+      "to": "23.seed"
+    },
+    {
+      "op": "set_widget",
+      "node": "3",
+      "widget": "seed",
+      "value": "${structure_seed}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "3",
+      "field": "title",
+      "value": "Structure seed"
+    },
+    {
+      "op": "set_widget",
+      "node": "12",
+      "widget": "seed",
+      "value": "${texture_seed}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "12",
+      "field": "title",
+      "value": "Texture generation seed"
+    },
+    {
+      "op": "set_widget",
+      "node": "186",
+      "widget": "target_face_count",
+      "value": "${polygons}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "186",
+      "field": "title",
+      "value": "Polygon count"
+    },
+    {
+      "op": "set_widget",
+      "node": "241",
+      "widget": "resolution",
+      "value": "${remesh_resolution}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "241",
+      "field": "title",
+      "value": "Remesh resolution"
+    },
+    {
+      "op": "set_widget",
+      "node": "94",
+      "widget": "target_resolution",
+      "value": 1024
+    },
+    {
+      "op": "set_widget",
+      "node": "316",
+      "widget": "value",
+      "value": "${use_trellis2}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "316",
+      "field": "title",
+      "value": "Model: false = Pixal3D, true = Trellis.2"
+    },
+    {
+      "op": "set_widget",
+      "node": "288",
+      "widget": "value",
+      "value": "${texture_size}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "288",
+      "field": "title",
+      "value": "Texture size (square, all PBR maps)"
+    },
+    {
+      "op": "set_widget",
+      "node": "147",
+      "widget": "texture_size",
+      "value": "${texture_size}"
+    },
+    {
+      "op": "connect",
+      "from": "288.INT",
+      "to": "147.texture_size"
+    },
+    {
+      "op": "set_widget",
+      "node": "196",
+      "widget": "resolution",
+      "value": "${texture_size}"
+    },
+    {
+      "op": "connect",
+      "from": "288.INT",
+      "to": "196.resolution"
+    },
+    {
+      "op": "set_widget",
+      "node": "224",
+      "widget": "resolution",
+      "value": "${texture_size}"
+    },
+    {
+      "op": "connect",
+      "from": "288.INT",
+      "to": "224.resolution"
+    },
+    {
+      "op": "set_widget",
+      "node": "233",
+      "widget": "resolution",
+      "value": "${texture_size}"
+    },
+    {
+      "op": "connect",
+      "from": "288.INT",
+      "to": "233.resolution"
+    },
+    {
+      "op": "set_widget",
+      "node": "122",
+      "widget": "image",
+      "value": "${image}"
+    },
+    {
+      "op": "set_node_field",
+      "node": "122",
+      "field": "title",
+      "value": "Source image"
+    }
+  ]
+}

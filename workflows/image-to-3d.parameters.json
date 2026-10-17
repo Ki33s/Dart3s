@@ -1,0 +1,71 @@
+{
+  "parameters": {
+    "image": "097adbbb89a846339c50ad1d4c666c09.png",
+    "polygons": 10000,
+    "remesh_resolution": 256,
+    "texture_size": 256,
+    "structure_seed": 56,
+    "shape_seed": 1024,
+    "texture_seed": 1024,
+    "use_trellis2": true,
+    "quality": "fast",
+    "mesh_mode": "original"
+  },
+  "favorites": {
+    "favorites": [
+      {
+        "nodeLocatorId": "1748091989994769",
+        "widgetName": "value"
+      },
+      {
+        "nodeLocatorId": "3907495065582510",
+        "widgetName": "value"
+      },
+      {
+        "nodeLocatorId": "12",
+        "widgetName": "seed"
+      },
+      {
+        "nodeLocatorId": "316",
+        "widgetName": "value"
+      },
+      {
+        "nodeLocatorId": "122",
+        "widgetName": "image"
+      },
+      {
+        "nodeLocatorId": "449818134315828",
+        "widgetName": "max_elements"
+      },
+      {
+        "nodeLocatorId": "449818134315828",
+        "widgetName": "retries"
+      }
+    ]
+  },
+  "source_sha256": "628844750e64fb1307e0d11f734bd693e95ec6da114a9246c9d81a3bfa145347",
+  "shape_seed_node": 3907495065582510,
+  "model_values": {
+    "pixal3d": false,
+    "trellis2": true
+  },
+  "favorites_source": "https://github.com/Comfy-Org/ComfyUI_frontend/blob/v1.49.6/src/stores/workspace/favoritedWidgetsStore.ts",
+  "summary": {
+    "active_nodes": 41,
+    "disabled_nodes": 29,
+    "terminal": 322,
+    "geometry_seed_shared": true,
+    "all_pbr_texture_sizes_shared": true,
+    "progress_observers": 0,
+    "geometry_before_textures": false,
+    "quality": "fast",
+    "shape_resolution": 512,
+    "optional_pbr_bakers": false,
+    "early_timing_nodes": 2,
+    "mesh_mode": "original",
+    "color_storage": "vertex_colors",
+    "max_structure_elements": 4096,
+    "structure_retries": 0,
+    "structure_budget_node": 449818134315828
+  }
+}

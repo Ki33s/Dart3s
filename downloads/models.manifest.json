@@ -1,0 +1,37 @@
+[
+  {
+    "name": "birefnet.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/BiRefNet/resolve/main/background_removal/birefnet.safetensors",
+    "directory": "background_removal"
+  },
+  {
+    "name": "moge_2_vitl_normal_fp16.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/MoGe/resolve/main/geometry_estimation/moge_2_vitl_normal_fp16.safetensors",
+    "directory": "geometry_estimation"
+  },
+  {
+    "name": "dino_v3_L_naf_fp32.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/clip_vision/dino_v3_L_naf_fp32.safetensors",
+    "directory": "clip_vision"
+  },
+  {
+    "name": "pixal3d_int8_convrot.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/diffusion_models/pixal3d_int8_convrot.safetensors",
+    "directory": "diffusion_models"
+  },
+  {
+    "name": "trellis_2_shape_vae_bf16.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/vae/trellis_2_shape_vae_bf16.safetensors",
+    "directory": "vae"
+  },
+  {
+    "name": "trellis_2_texture_vae_bf16.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/vae/trellis_2_texture_vae_bf16.safetensors",
+    "directory": "vae"
+  },
+  {
+    "name": "trellis_2_int8_convrot.safetensors",
+    "url": "https://huggingface.co/Comfy-Org/TRELLIS.2/resolve/main/diffusion_models/trellis_2_int8_convrot.safetensors",
+    "directory": "diffusion_models"
+  }
+]
